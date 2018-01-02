@@ -26,14 +26,8 @@ X = [ones(m, 1) X];
 %Get second layer
 layer2 = sigmoid(X * Theta1');
 
-%Add a0 in second layer
-layer2 = [ones(m, 1) layer2];
+layer2 = [1, layer2
 
-%Get third layer
-layer3 = layer2 * Theta2';
-
-%Final prediction
-[~, p] = max(layer3, [], 2);
 
 
 % =========================================================================
